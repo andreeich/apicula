@@ -22,87 +22,204 @@
   </head>
 
   <body>
-    <header class="bg-base-100">
+    <header>
       <div class="container">
         <div class="navbar">
-          <div class="navbar-start">
-            <label
-              tabindex="0"
-              class="btn btn-ghost lg:hidden swap swap-rotate"
-            >
-              <!-- this hidden checkbox controls the state -->
-              <input class="navbar-toggle" type="checkbox" checked />
+          <a href="#">
+            <img
+              class="w-[100px] h-[16px] md:w-[148px] md:h-[24px]"
+              width="148"
+              height="24"
+              src="./assets/logo.svg"
+              alt="Apicula"
+            />
+          </a>
+          <ul class="navbar-end">
+            <li><a class="navbar-end-link" href="#">Services</a></li>
+            <li><a class="navbar-end-link" href="#">Our Cases</a></li>
+            <li><a class="navbar-end-link" href="#">Blog</a></li>
+          </ul>
+          <label tabindex="0" class="md:hidden swap swap-rotate">
+            <!-- this hidden checkbox controls the state -->
+            <input class="navbar-toggle" type="checkbox" />
 
-              <!-- bars-3 -->
-              <i
-                class="w-5 h-5 icon-[heroicons--bars-3] fill-current swap-on"
-              ></i>
-              <!-- x-mark -->
-              <i
-                class="w-5 h-5 icon-[heroicons--x-mark] fill-current swap-off"
-              ></i>
-            </label>
-            <a class="text-xl normal-case btn btn-primary">
-              <img class="w-auto h-1/2" src="./assets/logo.svg" alt="Logo" />
-            </a>
-          </div>
-          <div class="hidden navbar-center lg:flex">
-            <ul class="px-1 menu menu-horizontal">
-              <li><a>Home</a></li>
-              <li tabindex="0">
-                <details>
-                  <summary>Services</summary>
-                  <ul>
-                    <li><a>Branding</a></li>
-                    <li><a>Design</a></li>
-                    <li><a>Marketing</a></li>
-                    <li><a>Advertisement</a></li>
-                  </ul>
-                </details>
-              </li>
-              <li><a>About us</a></li>
-              <li><a>Contact</a></li>
-            </ul>
-          </div>
-          <div class="navbar-end">
-            <ul class="menu menu-icons menu-horizontal rounded-box">
-              <li>
-                <a> <i class="w-5 h-5 icon-[heroicons--heart]"></i> </a>
-              </li>
-              <li>
-                <a> <i class="w-5 h-5 icon-[heroicons--gift]"></i> </a>
-              </li>
-              <li>
-                <a> <i class="w-5 h-5 icon-[heroicons--globe-alt]"></i> </a>
-              </li>
-            </ul>
-          </div>
-          <div class="navbar-menu lg:hidden">
-            <div class="navbar-menu__content">
-              <ul class="space-y-2 menu">
-                <li><a>Home</a></li>
-                <li tabindex="0">
-                  <details>
-                    <summary>Services</summary>
-                    <ul>
-                      <li><a>Branding</a></li>
-                      <li><a>Design</a></li>
-                      <li><a>Marketing</a></li>
-                      <li><a>Advertisement</a></li>
-                    </ul>
-                  </details>
-                </li>
-                <li><a>About us</a></li>
-                <li><a>Contact</a></li>
+            <!-- bars-3 -->
+            <i class="w-5 h-5 icon-[custom--burger] fill-current swap-on"></i>
+            <!-- x-mark -->
+            <i class="w-5 h-5 icon-[custom--close] fill-current swap-off"></i>
+          </label>
+          <div class="navbar-menu md:hidden">
+            <div class="navbar-menu__content container">
+              <ul class="flex flex-col gap-8 items-center">
+                <li><a class="navbar-end-link" href="#">Services</a></li>
+                <li><a class="navbar-end-link" href="#">Our Cases</a></li>
+                <li><a class="navbar-end-link" href="#">Blog</a></li>
               </ul>
             </div>
           </div>
         </div>
       </div>
     </header>
-    <main>
-      <section>
-        <div class="container"></div>
+    <main class="">
+      <section class="my-7.5">
+        <div class="container flex flex-col gap-10">
+          <h2 class="">
+            Get Started with Our Software Development Services Today
+          </h2>
+          <div class="grid grid-cols-3 grid-rows-2 gap-8">
+            <article class="card-service card-service--dark">
+              <h3>Schedule a Discovery</h3>
+              <p>Let's uncover your challenges together.</p>
+              <button class="btn btn-white">Schedule a Call</button>
+              <div class="card-service__container">
+                <span class="card-service__number">1</span>
+                <img
+                  class="card-service__image"
+                  src="./assets/lines-1-white.svg"
+                  alt="lines"
+                />
+              </div>
+            </article>
+            <article class="card-service">
+              <h3>Share Your Vision</h3>
+              <p>
+                Detail the tasks at hand. Define what success looks like for
+                you.
+              </p>
+              <div class="card-service__container">
+                <span class="card-service__number">2</span>
+                <img
+                  class="card-service__image"
+                  src="./assets/lines-1-black.svg"
+                  alt="lines"
+                />
+              </div>
+            </article>
+            <article class="card-service">
+              <h3>Receive Insightful Guidance</h3>
+              <p>
+                Our experts provide feedback that's as strategic as it is
+                honest.
+              </p>
+              <div class="card-service__container">
+                <span class="card-service__number">3</span>
+                <img
+                  class="card-service__image"
+                  src="./assets/lines-1-black.svg"
+                  alt="lines"
+                />
+              </div>
+            </article>
+            <article class="card-service">
+              <h3>Make Your Decision</h3>
+              <p>Choose if our paths align for a collaborative future.</p>
+              <div class="card-service__container">
+                <span class="card-service__number">4</span>
+                <img
+                  class="card-service__image"
+                  src="./assets/lines-1-black.svg"
+                  alt="lines"
+                />
+              </div>
+            </article>
+            <article class="card-service">
+              <h3>Tailore Priorities</h3>
+              <p>Your needs dictate our focus. We adjust, you advance.</p>
+              <div class="card-service__container">
+                <span class="card-service__number">5</span>
+                <img
+                  class="card-service__image"
+                  src="./assets/lines-1-black.svg"
+                  alt="lines"
+                />
+              </div>
+            </article>
+            <article class="card-service">
+              <h3>Begin the Journey</h3>
+              <p>
+                Development starts. We deliver results that speak for
+                themselves.
+              </p>
+              <div class="card-service__container">
+                <span class="card-service__number">6</span>
+                <img
+                  class="card-service__image"
+                  src="./assets/lines-1-black.svg"
+                  alt="lines"
+                />
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section class="my-7.5">
+        <div class="container grid grid-cols-2 gap-10">
+          <h2>What Makes Us Different?</h2>
+          <div>
+            <div class="accordion">
+              <input
+                type="radio"
+                name="what-makes-us-different"
+                checked="checked"
+              />
+              <h3 class="accordion-title">
+                Bespoke Solutions, Crafted with Care
+              </h3>
+              <div class="accordion-content">
+                <p>
+                  Beyond addressing your needs, we're committed to exceeding
+                  your expectations. Let's collaborate to explore, envision, and
+                  execute the perfect solution for your business.
+                </p>
+              </div>
+            </div>
+            <div class="accordion">
+              <input type="radio" name="what-makes-us-different" />
+              <h3 class="accordion-title">Your Challenges, Our Expertise</h3>
+              <div class="accordion-content">
+                <p>
+                  Beyond addressing your needs, we're committed to exceeding
+                  your expectations. Let's collaborate to explore, envision, and
+                  execute the perfect solution for your business.
+                </p>
+              </div>
+            </div>
+            <div class="accordion">
+              <input type="radio" name="what-makes-us-different" />
+              <h3 class="accordion-title">Unstoppable Together</h3>
+              <div class="accordion-content">
+                <p>
+                  Beyond addressing your needs, we're committed to exceeding
+                  your expectations. Let's collaborate to explore, envision, and
+                  execute the perfect solution for your business.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="my-7.5">
+        <div class="container flex flex-col items-center gap-10">
+          <div class="carousel">
+            <div class="carousel__viewport">
+              <div class="carousel__container">
+                <div class="carousel__slide">With over a decade of experience, Ledventure specializes in offering comprehensive LED solutions for DOOH, leveraging mature technology to deliver reliable and visually appealing products.</div>
+                <div class="carousel__slide">With over a decade of experience, Ledventure specializes in offering comprehensive LED solutions for DOOH, leveraging mature technology to deliver reliable and visually appealing products.</div>
+                <div class="carousel__slide">With over a decade of experience, Ledventure specializes in offering comprehensive LED solutions for DOOH, leveraging mature technology to deliver reliable and visually appealing products.</div>
+                <div class="carousel__slide">With over a decade of experience, Ledventure specializes in offering comprehensive LED solutions for DOOH, leveraging mature technology to deliver reliable and visually appealing products.</div>
+                <div class="carousel__slide">With over a decade of experience, Ledventure specializes in offering comprehensive LED solutions for DOOH, leveraging mature technology to deliver reliable and visually appealing products.</div>
+              </div>
+            </div>
+            <div class="carousel__controls">
+              <div class="carousel__dots"></div>
+            </div>
+          </div>
+          <div class="flex items-center gap-10">
+            <img class="h-fit" width="178" height="39" src="./assets/company-logo-1.svg" alt="Circadence">
+            <img class="h-fit" width="175" height="36" src="./assets/company-logo-2.png" alt="Ledventure">
+            <img class="h-fit" width="142" height="36" src="./assets/company-logo-3.png" alt="Wavelens">
+          </div>
+        </div>
       </section>
     </main>
     <footer class="bg-base-200">
@@ -137,5 +254,6 @@
     </footer>
 
     <script src="./main.js" type="module"></script>
+    <script src="./js/carouselQuotes.js" type="module"></script>
   </body>
 </html>

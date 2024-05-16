@@ -4,9 +4,9 @@
   "version": "1.0.2",
   "license": "MIT",
   "scripts": {
-    "dev": "yarn clean && parcel ./src/*.html",
-    "build": "yarn clean && yarn parcel build ./src/*.html",
-    "production": "yarn clean && yarn parcel build ./src/*.html --no-optimize --no-source-maps --detailed-report",
+    "dev": "bun clean && bun parcel ./src/*.html",
+    "build": "bun clean && bun parcel build ./src/*.html",
+    "production": "bun clean && bun parcel build ./src/*.html --no-optimize --no-source-maps --detailed-report",
     "clean": "rm -rf dist && rm -rf .parcel-cache"
   },
   "devDependencies": {
@@ -32,9 +32,10 @@
     "animejs": "^3.2.1",
     "aos": "^3.0.0-beta.6",
     "breakpoint-helper": "^2.0.4",
-    "daisyui": "^3.6.4",
+    "embla-carousel": "^8.0.4",
     "scrollmagic": "^2.0.8",
     "tailwindcss": "^3.3.3",
+    "tailwindcss-animate": "^1.0.7",
     "throttle-debounce": "^5.0.0"
   },
   "parcel-namer-custom": {
@@ -47,6 +48,6 @@
     ".otf$": "fonts/[folder]/[name].[hash].[type]"
   },
   "@parcel/runtime-js": {
-    "splitManifestThreshold": 10000
+    "splitManifestThreshold": 1e4
   }
 }

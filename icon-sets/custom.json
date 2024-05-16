@@ -5,6 +5,16 @@
 			"body": "<g fill=\"currentColor\"><path fill-rule=\"evenodd\" d=\"M5.854 4.646a.5.5 0 0 1 0 .708L3.207 8l2.647 2.646a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 0 1 .708 0z\"/><path fill-rule=\"evenodd\" d=\"M2.5 8a.5.5 0 0 1 .5-.5h10.5a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z\"/></g>",
 			"width": 16,
 			"height": 16
+		},
+		"burger": {
+			"body": "<rect y=\"4\" width=\"20\" height=\"2\" fill=\"currentColor\"/><rect y=\"10\" width=\"20\" height=\"2\" fill=\"currentColor\"/>",
+			"width": 20,
+			"height": 16
+		},
+		"close": {
+			"body": "<rect width=\"20.4776\" height=\"1.98464\" transform=\"matrix(0.704137 -0.710064 0.691836 0.722055 2 14.5403)\" fill=\"currentColor\"/><rect width=\"20.5003\" height=\"1.98464\" transform=\"matrix(0.704137 0.710064 -0.691836 0.722055 3.56543 0.010498)\" fill=\"currentColor\"/>",
+			"width": 20,
+			"height": 16
 		}
 	},
 	"aliases": {
