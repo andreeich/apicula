@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="description" content="A brief description of your web page" />
+    <meta name="author" content="@andreeich" />
+
+    <meta property="og:title" content="Page Title" />
+    <meta
+      property="og:description"
+      content="Brief description of the web page"
+    />
+    <meta property="og:image" content="https://placehold.co/400x300" />
+
+    <link rel="shortcut icon" type="image/svg" href="./favicon.svg" />
+
+    <link href="./style.css" rel="stylesheet" />
+
+    <title>Home</title>
+  </head>
+
+  <body>
+    <header class="bg-base-100">
+      <div class="container">
+        <div class="navbar">
+          <div class="navbar-start">
+            <label
+              tabindex="0"
+              class="btn btn-ghost lg:hidden swap swap-rotate"
+            >
+              <!-- this hidden checkbox controls the state -->
+              <input class="navbar-toggle" type="checkbox" checked />
+
+              <!-- bars-3 -->
+              <i
+                class="w-5 h-5 icon-[heroicons--bars-3] fill-current swap-on"
+              ></i>
+              <!-- x-mark -->
+              <i
+                class="w-5 h-5 icon-[heroicons--x-mark] fill-current swap-off"
+              ></i>
+            </label>
+            <a class="text-xl normal-case btn btn-primary">
+              <img class="w-auto h-1/2" src="./assets/logo.svg" alt="Logo" />
+            </a>
+          </div>
+          <div class="hidden navbar-center lg:flex">
+            <ul class="px-1 menu menu-horizontal">
+              <li><a>Home</a></li>
+              <li tabindex="0">
+                <details>
+                  <summary>Services</summary>
+                  <ul>
+                    <li><a>Branding</a></li>
+                    <li><a>Design</a></li>
+                    <li><a>Marketing</a></li>
+                    <li><a>Advertisement</a></li>
+                  </ul>
+                </details>
+              </li>
+              <li><a>About us</a></li>
+              <li><a>Contact</a></li>
+            </ul>
+          </div>
+          <div class="navbar-end">
+            <ul class="menu menu-icons menu-horizontal rounded-box">
+              <li>
+                <a> <i class="w-5 h-5 icon-[heroicons--heart]"></i> </a>
+              </li>
+              <li>
+                <a> <i class="w-5 h-5 icon-[heroicons--gift]"></i> </a>
+              </li>
+              <li>
+                <a> <i class="w-5 h-5 icon-[heroicons--globe-alt]"></i> </a>
+              </li>
+            </ul>
+          </div>
+          <div class="navbar-menu lg:hidden">
+            <div class="navbar-menu__content">
+              <ul class="space-y-2 menu">
+                <li><a>Home</a></li>
+                <li tabindex="0">
+                  <details>
+                    <summary>Services</summary>
+                    <ul>
+                      <li><a>Branding</a></li>
+                      <li><a>Design</a></li>
+                      <li><a>Marketing</a></li>
+                      <li><a>Advertisement</a></li>
+                    </ul>
+                  </details>
+                </li>
+                <li><a>About us</a></li>
+                <li><a>Contact</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section>
+        <div class="container"></div>
+      </section>
+    </main>
+    <footer class="bg-base-200">
+      <div class="container">
+        <div class="p-4 lg:px-0 footer">
+          <div>
+            <img class="h-auto w-30" src="./assets/logo.svg" alt="Logo" />
+            <p>@<b>andreeich</b> website template.<br />ver.1.1.1</p>
+          </div>
+          <div>
+            <span class="footer-title">Services</span>
+            <a class="link link-hover">Branding</a>
+            <a class="link link-hover">Design</a>
+            <a class="link link-hover">Marketing</a>
+            <a class="link link-hover">Advertisement</a>
+          </div>
+          <div>
+            <span class="footer-title">Company</span>
+            <a class="link link-hover">About us</a>
+            <a class="link link-hover">Contact</a>
+            <a class="link link-hover">Jobs</a>
+            <a class="link link-hover">Press kit</a>
+          </div>
+          <div>
+            <span class="footer-title">Legal</span>
+            <a class="link link-hover">Terms of use</a>
+            <a class="link link-hover">Privacy policy</a>
+            <a class="link link-hover">Cookie policy</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./main.js" type="module"></script>
+  </body>
+</html>

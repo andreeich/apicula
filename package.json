@@ -1,0 +1,52 @@
+{
+  "name": "parcel-template",
+  "browserslist": "> 0.5%, last 2 versions, not dead",
+  "version": "1.0.2",
+  "license": "MIT",
+  "scripts": {
+    "dev": "yarn clean && parcel ./src/*.html",
+    "build": "yarn clean && yarn parcel build ./src/*.html",
+    "production": "yarn clean && yarn parcel build ./src/*.html --no-optimize --no-source-maps --detailed-report",
+    "clean": "rm -rf dist && rm -rf .parcel-cache"
+  },
+  "devDependencies": {
+    "@gatsbyjs/parcel-namer-relative-to-cwd": "^2.11.0",
+    "@iconify-json/heroicons": "^1.1.11",
+    "@iconify/tailwind": "^0.1.3",
+    "@parcel/compressor-brotli": "^2.9.3",
+    "@parcel/compressor-gzip": "^2.9.3",
+    "@parcel/optimizer-cssnano": "^2.9.3",
+    "@parcel/transformer-sass": "2.9.3",
+    "eslint": "^7.32.0 || ^8.2.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.25.2",
+    "parcel": "^2.9.3",
+    "parcel-namer-custom": "^0.2.0",
+    "path-browserify": "^1.0.0",
+    "postcss": "^8.4.27",
+    "process": "^0.11.10",
+    "sharp": "^0.31.3"
+  },
+  "dependencies": {
+    "@splidejs/splide": "^4.1.4",
+    "animejs": "^3.2.1",
+    "aos": "^3.0.0-beta.6",
+    "breakpoint-helper": "^2.0.4",
+    "daisyui": "^3.6.4",
+    "scrollmagic": "^2.0.8",
+    "tailwindcss": "^3.3.3",
+    "throttle-debounce": "^5.0.0"
+  },
+  "parcel-namer-custom": {
+    "favicon.": "[name].[type]",
+    ".s?css": "css/[name].[hash].[type]",
+    ".jsx?$": "js/[name].[hash].[type]",
+    ".png$|.jpe?g$|.svg$": "assets/images/[name].[hash].[type]",
+    ".mp4$": "assets/videos/[name].[hash].[type]",
+    ".ttf$": "fonts/[folder]/[name].[hash].[type]",
+    ".otf$": "fonts/[folder]/[name].[hash].[type]"
+  },
+  "@parcel/runtime-js": {
+    "splitManifestThreshold": 10000
+  }
+}

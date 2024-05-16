@@ -1,0 +1,111 @@
+/* ? google fonts */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+/* ? custom fonts */
+@font-face {
+  font-family: "Roboto Custom";
+  src: url("./fonts/Roboto/Roboto-Regular.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto Custom";
+  src: url("./fonts/Roboto/Roboto-Bold.ttf");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .-z-1 {
+    @apply z-[-1];
+  }
+
+  .container {
+    @apply px-2 mx-auto;
+  }
+
+  .h-screen {
+    height: 100vh;
+    height: 100svh;
+  }
+  .min-h-screen {
+    min-height: 100vh;
+    min-height: 100svh;
+  }
+  .max-h-screen {
+    max-height: 100vh;
+    max-height: 100svh;
+  }
+
+  .h-navbar {
+    @apply h-[var(--navbar-height,4rem)];
+  }
+
+  .mt-navbar {
+    @apply mt-[var(--navbar-height,4rem)];
+  }
+  .pt-navbar {
+    @apply pt-[var(--navbar-height,4rem)];
+  }
+}
+
+html {
+  @apply [--navbar-height:4rem];
+  @apply scroll-smooth;
+  @apply scroll-pt-[var(--navbar-height,4rem)];
+}
+body,
+header,
+main,
+footer {
+  @apply relative;
+}
+body {
+  @apply font-serif-custom;
+  @apply grid min-h-screen grid-cols-1;
+  @apply grid-rows-[1fr_auto];
+  /* ? for static header */
+  /* @apply grid-rows-[auto_1fr_auto]; */
+}
+header {
+  @apply fixed top-0 left-0 z-20 w-full;
+}
+main {
+  @apply grid grid-flow-row mt-navbar;
+}
+footer {
+  @apply z-10;
+}
+
+.navbar {
+  @apply px-0 h-navbar;
+}
+.navbar-start,
+.navbar-end {
+  @apply flex-1 w-auto;
+}
+.navbar-menu {
+  @apply absolute inset-0 invisible w-full h-screen -translate-y-full pt-navbar bg-base-200/90 backdrop-blur-sm -z-1;
+
+  &__content {
+    @apply container grid w-full h-full overflow-y-auto place-content-stretch;
+  }
+}
+
+/* ? css mobile menu */
+html:not(:has(.navbar-toggle:checked)),
+body:not(:has(.navbar-toggle:checked)) {
+  @apply overflow-hidden;
+}
+.navbar:not(:has(.navbar-toggle:checked)) .navbar-menu {
+  @apply visible transition-transform translate-y-0;
+}
+
+.menu-icons {
+  a {
+    @apply p-2;
+  }
+}
