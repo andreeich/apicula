@@ -45,8 +45,8 @@ export const config = {
 
 // ? TOGGLE BUTTON selector
 const setupMobileMenu = () => {
-  const toggle = document.querySelector('.navbar .navbar-toggle');
-  const menu = document.querySelector('.navbar .navbar-menu');
+  const toggle = document.querySelector(".navbar .navbar-toggle");
+  const menu = document.querySelector(".navbar .navbar-menu");
 
   toggle.checked = true;
 
