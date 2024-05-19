@@ -46,15 +46,6 @@
     "tailwindcss-animate": "^1.0.7",
     "throttle-debounce": "^5.0.0"
   },
-  "parcel-namer-custom": {
-    "favicon.": "[name].[type]",
-    ".s?css": "css/[name].[hash].[type]",
-    ".jsx?$": "js/[name].[hash].[type]",
-    ".png$|.jpe?g$|.svg$": "assets/images/[name].[hash].[type]",
-    ".mp4$": "assets/videos/[name].[hash].[type]",
-    ".ttf$": "fonts/[folder]/[name].[hash].[type]",
-    ".otf$": "fonts/[folder]/[name].[hash].[type]"
-  },
   "@parcel/runtime-js": {
     "splitManifestThreshold": 10000
   }
