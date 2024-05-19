@@ -4,7 +4,7 @@ import { addDotBtnsAndClickHandlers } from "./EmblaCarouselDotButton";
 
 const OPTIONS = {};
 
-const emblaNode = document.querySelector(".carousel");
+const emblaNode = document.querySelector(".carousel--quotes");
 const viewportNode = emblaNode.querySelector(".carousel__viewport");
 // const prevBtnNode = emblaNode.querySelector(".carousel__button--prev");
 // const nextBtnNode = emblaNode.querySelector(".carousel__button--next");

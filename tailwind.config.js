@@ -25,6 +25,7 @@ module.exports = {
       colors: {
         yellow: "#FFD601",
         dark: "#030303",
+        gray: "#FBFBFB",
         error: "#FF1919",
         success: "#06D50E",
       },
