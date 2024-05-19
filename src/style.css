@@ -6,6 +6,11 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  .max-w-screen {
+    @apply max-w-[100vw];
+  }
+}
 @layer components {
   .-z-1 {
     @apply z-[-1];
@@ -36,7 +41,7 @@
   }
 
   .btn {
-    @apply inline-flex py-4 px-10 text-p1/p1 font-bold bg-dark text-white rounded-full transition-all;
+    @apply inline-flex py-4 px-10 text-p1/p1 font-bold bg-dark text-white rounded-full transition-all text-center justify-center;
 
     &-white {
       @apply bg-white text-dark;
@@ -79,13 +84,13 @@ h1 {
   @apply text-h1/h1 font-sans font-medium;
 }
 h2 {
-  @apply text-h2/h2 font-sans font-medium;
+  @apply text-[2rem]/[2.4rem] sm:text-[3rem]/[3.6rem] md:text-h2/h2 font-sans font-medium;
 }
 h3 {
-  @apply text-h3/h3 font-sans font-medium;
+  @apply text-[1.5rem]/[1.65rem] sm:text-[1.75rem]/[1.925rem] md:text-h3/h3 font-sans font-medium;
 }
 h4 {
-  @apply text-h4/h4 font-sans font-medium;
+  @apply text-[1.125rem]/[1.6875rem] sm:text-[1.5rem]/[2.25rem] md:text-h4/h4 font-sans font-medium;
 }
 h5 {
   @apply text-h5/h5 font-sans font-medium;
@@ -140,7 +145,7 @@ body:not(:has(.navbar-toggle:checked)) {
 }
 
 .card-service {
-  @apply relative flex flex-col items-start justify-center gap-4 bg-[#FBFBFB] text-dark rounded-10 py-6 px-8;
+  @apply relative flex flex-col items-start justify-center gap-2 md:gap-4 bg-[#FBFBFB] text-dark rounded-10 py-6 px-8 overflow-clip;
 
   &__number {
     @apply absolute left-0 top-1/2 -translate-y-1/2 text-dark text-[200px] opacity-5 font-sans font-medium;
@@ -150,6 +155,9 @@ body:not(:has(.navbar-toggle:checked)) {
   }
   &__container {
     @apply absolute inset-0 pointer-events-none;
+  }
+  button {
+    @apply mt-2 md:mt-0 z-10;
   }
 
   &--dark {
@@ -184,13 +192,13 @@ body:not(:has(.navbar-toggle:checked)) {
 }
 
 .carousel {
-  @apply max-w-[47.5rem] mx-auto relative;
+  @apply max-w-full md:max-w-[47.5rem] mx-auto relative px-8;
   --slide-height: 19rem;
   --slide-spacing: 1rem;
   --slide-size: 100%;
 
   &::after {
-    @apply absolute left-[-16px] top-[-16px] -translate-x-full -translate-y-full;
+    @apply absolute left-8 md:left-4 top-[-16px] -translate-x-full -translate-y-full;
     content: "";
     background: no-repeat center/contain
       url('data:image/svg+xml,%3Csvg viewBox="0 0 33 24" fill="none" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath d="M16.9541 0L10.6972 24H0L9.2844 0H16.9541ZM33 0L26.7431 24H16.0459L25.3303 0H33Z" fill="%23FFD601"/%3E%3C/svg%3E%0A');
@@ -209,7 +217,7 @@ body:not(:has(.navbar-toggle:checked)) {
   margin-left: calc(var(--slide-spacing) * -1);
 }
 .carousel__slide {
-  @apply text-h4/h4 font-medium font-sans;
+  @apply text-[1.125rem]/[1.6875rem] sm:text-[1.5rem]/[2.25rem] md:text-h4/h4  font-medium font-sans;
   flex: 0 0 var(--slide-size);
   min-width: 0;
   padding-left: var(--slide-spacing);
@@ -228,4 +236,12 @@ body:not(:has(.navbar-toggle:checked)) {
 }
 .carousel__dot--selected {
   @apply bg-yellow;
+}
+
+.input {
+  @apply bg-black border border-white/70 focus-visible:border-white focus-visible:text-white rounded-lg py-3 px-4 text-white placeholder:text-white/70 invalid:border-error invalid:text-error disabled:opacity-20 outline-none text-p1/p1 transition-none;
+}
+
+.checkbox {
+  @apply relative appearance-none w-8 h-8 border border-white rounded-lg after:content-[""] after:absolute after:inset-0.5 after:bg-transparent checked:after:bg-yellow after:rounded-md after:transition-all flex-shrink-0;
 }

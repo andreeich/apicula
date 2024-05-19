@@ -21,7 +21,7 @@ module.exports = {
   },
   rules: {
     indent: ["warn"],
-    quotes: "double",
+    quotes: [1, "double"],
     "import/no-extraneous-dependencies": [
       "off",
       {

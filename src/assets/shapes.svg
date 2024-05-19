@@ -1,0 +1,19 @@
+<svg width="448" height="448" viewBox="0 0 448 448" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_289_1723)">
+<mask id="mask0_289_1723" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="448" height="448">
+<path d="M0 0H448V448H0V0Z" fill="white"/>
+</mask>
+<g mask="url(#mask0_289_1723)">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M448 0H336V112H448V0ZM224 112H336V224H448V336H336V448H224V336H112V448H0V336H112V224H0V112H112V0H224V112ZM224 224H112V112H224V224ZM224 224V336H336V224H224Z" fill="#F7F7F7"/>
+</g>
+<rect width="114.24" height="114.24" transform="matrix(-1 0 0 1 338.24 112)" fill="#FFD601"/>
+<rect width="114.24" height="114.24" transform="matrix(-1 0 0 1 338.24 333.76)" fill="#FFD601"/>
+<rect width="114.24" height="114.24" transform="matrix(-1 0 0 1 114.24 112)" fill="#FFD601"/>
+<rect width="114.24" height="114.24" transform="matrix(-1 0 0 1 114.24 333.76)" fill="#FFD601"/>
+</g>
+<defs>
+<clipPath id="clip0_289_1723">
+<rect width="448" height="448" fill="white" transform="matrix(-1 0 0 1 448 0)"/>
+</clipPath>
+</defs>
+</svg>

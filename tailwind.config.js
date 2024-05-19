@@ -1,4 +1,5 @@
 const { addDynamicIconSelectors } = require('@iconify/tailwind');
+const tailwindcssAnimate = require("tailwindcss-animate");
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -12,7 +13,7 @@ module.exports = {
         "2xl": "4rem",
       },
       screens: {
-        md: "52rem",
+        md: "64rem",
         "2xl": "90rem",
       },
     },
@@ -24,13 +25,20 @@ module.exports = {
       colors: {
         yellow: "#FFD601",
         dark: "#030303",
+        error: "#FF1919",
+        success: "#06D50E",
       },
       backgroundImage: {},
-      screens: {},
+      screens: {
+        // sm: "25rem",
+        md: "52rem",
+        "2xl": "90rem",
+      },
       dropShadow: {},
       boxShadow: {},
       spacing: {
-        7.5: "7.5rem",
+        20: "5rem",
+        30: "7.5rem",
       },
       fontSize: {
         h1: "7.5rem",
@@ -66,6 +74,6 @@ module.exports = {
         custom: "./icon-sets/custom.json",
       },
     }),
-    require("tailwindcss-animate"),
+    tailwindcssAnimate,
   ],
 };

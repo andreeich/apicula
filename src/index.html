@@ -27,7 +27,7 @@
         <div class="navbar">
           <a href="#">
             <img
-              class="w-[100px] h-[16px] md:w-[148px] md:h-[24px]"
+              class="w-[100px] h-[16px] sm:w-[148px] sm:h-[24px]"
               width="148"
               height="24"
               src="./assets/logo.svg"
@@ -61,12 +61,14 @@
       </div>
     </header>
     <main class="">
-      <section class="my-7.5">
-        <div class="container flex flex-col gap-10">
+      <section class="my-20 sm:my-30">
+        <div class="container flex flex-col gap-8 sm:gap-10">
           <h2 class="">
             Get Started with Our Software Development Services Today
           </h2>
-          <div class="grid grid-cols-3 grid-rows-2 gap-8">
+          <div
+            class="grid grid-cols-1 sm:grid-cols-2 sm:grid-rows-3 md:grid-cols-3 md:grid-rows-2 gap-6 md:gap-8"
+          >
             <article class="card-service card-service--dark">
               <h3>Schedule a Discovery</h3>
               <p>Let's uncover your challenges together.</p>
@@ -152,10 +154,12 @@
           </div>
         </div>
       </section>
-      <section class="my-7.5">
-        <div class="container grid grid-cols-2 gap-10">
-          <h2>What Makes Us Different?</h2>
-          <div>
+      <section class="my-20 sm:my-30">
+        <div
+          class="container flex flex-col md:grid md:grid-cols-2 gap-8 sm:gap-10"
+        >
+          <h2 class="sm:w-[55%] md:w-auto">What Makes Us Different?</h2>
+          <div class="sm:w-[65%] sm:self-end md:w-auto">
             <div class="accordion">
               <input
                 type="radio"
@@ -198,56 +202,169 @@
           </div>
         </div>
       </section>
-      <section class="my-7.5">
-        <div class="container flex flex-col items-center gap-10">
+      <section class="max-w-screen my-20 sm:my-30 space-y-10">
+        <div class="container flex flex-col items-center">
           <div class="carousel">
             <div class="carousel__viewport">
               <div class="carousel__container">
-                <div class="carousel__slide">With over a decade of experience, Ledventure specializes in offering comprehensive LED solutions for DOOH, leveraging mature technology to deliver reliable and visually appealing products.</div>
-                <div class="carousel__slide">With over a decade of experience, Ledventure specializes in offering comprehensive LED solutions for DOOH, leveraging mature technology to deliver reliable and visually appealing products.</div>
-                <div class="carousel__slide">With over a decade of experience, Ledventure specializes in offering comprehensive LED solutions for DOOH, leveraging mature technology to deliver reliable and visually appealing products.</div>
-                <div class="carousel__slide">With over a decade of experience, Ledventure specializes in offering comprehensive LED solutions for DOOH, leveraging mature technology to deliver reliable and visually appealing products.</div>
-                <div class="carousel__slide">With over a decade of experience, Ledventure specializes in offering comprehensive LED solutions for DOOH, leveraging mature technology to deliver reliable and visually appealing products.</div>
+                <div class="carousel__slide">
+                  With over a decade of experience, Ledventure specializes in
+                  offering comprehensive LED solutions for DOOH, leveraging
+                  mature technology to deliver reliable and visually appealing
+                  products.
+                </div>
+                <div class="carousel__slide">
+                  With over a decade of experience, Ledventure specializes in
+                  offering comprehensive LED solutions for DOOH, leveraging
+                  mature technology to deliver reliable and visually appealing
+                  products.
+                </div>
+                <div class="carousel__slide">
+                  With over a decade of experience, Ledventure specializes in
+                  offering comprehensive LED solutions for DOOH, leveraging
+                  mature technology to deliver reliable and visually appealing
+                  products.
+                </div>
+                <div class="carousel__slide">
+                  With over a decade of experience, Ledventure specializes in
+                  offering comprehensive LED solutions for DOOH, leveraging
+                  mature technology to deliver reliable and visually appealing
+                  products.
+                </div>
+                <div class="carousel__slide">
+                  With over a decade of experience, Ledventure specializes in
+                  offering comprehensive LED solutions for DOOH, leveraging
+                  mature technology to deliver reliable and visually appealing
+                  products.
+                </div>
               </div>
             </div>
             <div class="carousel__controls">
               <div class="carousel__dots"></div>
             </div>
           </div>
-          <div class="flex items-center gap-10">
-            <img class="h-fit" width="178" height="39" src="./assets/company-logo-1.svg" alt="Circadence">
-            <img class="h-fit" width="175" height="36" src="./assets/company-logo-2.png" alt="Ledventure">
-            <img class="h-fit" width="142" height="36" src="./assets/company-logo-3.png" alt="Wavelens">
+        </div>
+        <div>
+          <div class="relative w-full h-40 overflow-clip">
+            <div class="absolute left-1/2 -translate-x-1/2">
+              <div class="grid grid-cols-3 w-[630px] items-center gap-10">
+                <img
+                  class="h-fit"
+                  width="178"
+                  height="39"
+                  src="./assets/company-logo-1.svg"
+                  alt="Circadence"
+                />
+                <img
+                  class="h-fit"
+                  width="175"
+                  height="36"
+                  src="./assets/company-logo-2.png"
+                  alt="Ledventure"
+                />
+                <img
+                  class="h-fit"
+                  width="142"
+                  height="36"
+                  src="./assets/company-logo-3.png"
+                  alt="Wavelens"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </section>
     </main>
-    <footer class="bg-base-200">
-      <div class="container">
-        <div class="p-4 lg:px-0 footer">
-          <div>
-            <img class="h-auto w-30" src="./assets/logo.svg" alt="Logo" />
-            <p>@<b>andreeich</b> website template.<br />ver.1.1.1</p>
+    <footer class="bg-black text-white">
+      <div class="container py-10 sm:py-16 2xl:py-30">
+        <div class="space-y-6">
+          <h2 class="sm:max-w-[85%] 2xl:max-w-[55%]">
+            Let's Create Something Amazing Together! Contact Us to Get Started
+          </h2>
+          <p class="pl-12 sm:pl-0 max-w-[350px] text-p2/p2">
+            Enter your details below to unlock your business's full potential
+            with our expert software solutions.
+          </p>
+        </div>
+        <div class="grid sm:grid-cols-[1fr_auto] gap-20">
+          <div class="2xl:max-w-[70%]">
+            <form class="flex flex-col gap-8 mt-10 mb-8">
+              <div class="flex flex-col md:flex-row gap-8">
+                <input
+                  class="input w-full"
+                  type="text"
+                  name="name"
+                  placeholder="Your Name"
+                />
+                <input
+                  class="input w-full"
+                  type="email"
+                  name="email"
+                  placeholder="Your Email"
+                />
+              </div>
+              <textarea
+                class="input"
+                name="message"
+                placeholder="Your Name"
+              ></textarea>
+              <div class="flex flex-col md:grid md:grid-cols-[3fr_2fr] gap-10">
+                <label
+                  class="text-p3/p3 flex gap-4 items-center"
+                  for="privacy-terms"
+                >
+                  <input
+                    class="checkbox"
+                    type="checkbox"
+                    name="privacy-terms"
+                    id="privacy-terms"
+                    required
+                    checked
+                  />
+                  <span>
+                    I'm opting into Apicula comms & agree to their
+                    <a href="#" class="underline">privacy terms</a>.
+                  </span>
+                </label>
+
+                <button class="btn btn-white w-full">Contact Us</button>
+              </div>
+            </form>
           </div>
-          <div>
-            <span class="footer-title">Services</span>
-            <a class="link link-hover">Branding</a>
-            <a class="link link-hover">Design</a>
-            <a class="link link-hover">Marketing</a>
-            <a class="link link-hover">Advertisement</a>
+          <div class="hidden sm:flex mt-4 2xl:mt-[-200px] flex-col gap-8">
+            <img
+              class="ml-auto w-[293px] 2xl:w-[488px]"
+              width="488"
+              src="./assets/shapes.svg"
+              alt="shapes"
+            />
+            <span class="opacity-60"
+              ><a href="#">Privacy Policy</a> |
+              <a href="#">Terms & Conditions</a></span
+            >
           </div>
-          <div>
-            <span class="footer-title">Company</span>
-            <a class="link link-hover">About us</a>
-            <a class="link link-hover">Contact</a>
-            <a class="link link-hover">Jobs</a>
-            <a class="link link-hover">Press kit</a>
-          </div>
-          <div>
-            <span class="footer-title">Legal</span>
-            <a class="link link-hover">Terms of use</a>
-            <a class="link link-hover">Privacy policy</a>
-            <a class="link link-hover">Cookie policy</a>
+        </div>
+      </div>
+      <hr class="opacity-20" />
+      <div class="container py-8 2xl:py-12">
+        <div class="flex flex-col items-center sm:flex-row justify-between gap-8">
+          <a href="#">
+            <img
+              class="w-[153px] h-[24px] sm:w-[148px] sm:h-[24px]"
+              width="148"
+              height="24"
+              src="./assets/logo-white.svg"
+              alt="Apicula"
+            />
+          </a>
+          <ul class="flex gap-8 items-center">
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Our Cases</a></li>
+            <li><a href="#">Blog</a></li>
+          </ul>
+          <div class="flex flex-col sm:flex-row items-center gap-6 sm:gap-16">
+            <span class="opacity-60 sm:hidden 2xl:inline"><a href="#">Privacy Policy</a> | <a href="#">Terms & Conditions</a></span>
+            <span class="opacity-60">© 2024 Apicula LLC</span>
           </div>
         </div>
       </div>
