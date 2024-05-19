@@ -1,6 +1,6 @@
 import EmblaCarousel from "embla-carousel";
-import { addPrevNextBtnsClickHandlers } from "./EmblaCarouselArrowButtons";
-import { addDotBtnsAndClickHandlers } from "./EmblaCarouselDotButton";
+import { addPrevNextBtnsClickHandlers } from "./emblaCarouselArrowButtons";
+import { addDotBtnsAndClickHandlers } from "./emblaCarouselDotButton";
 
 const OPTIONS = {};
 

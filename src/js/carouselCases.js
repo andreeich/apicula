@@ -1,7 +1,7 @@
 import EmblaCarousel from "embla-carousel";
-import { addPrevNextBtnsClickHandlers } from "./EmblaCarouselArrowButtons";
-import { setupProgressBar } from "./EmblaCarouselProgressBar";
-import { updateSelectedSnapDisplay } from "./EmblaCarouselSelectedSnapDisplay";
+import { addPrevNextBtnsClickHandlers } from "./emblaCarouselArrowButtons";
+import { setupProgressBar } from "./emblaCarouselProgressBar";
+import { updateSelectedSnapDisplay } from "./emblaCarouselSelectedSnapDisplay";
 
 const OPTIONS = { align: "start" };
 

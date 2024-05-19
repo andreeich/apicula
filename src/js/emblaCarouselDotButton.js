@@ -4,7 +4,10 @@ export const addDotBtnsAndClickHandlers = (emblaApi, dotsNode) => {
   const addDotBtnsWithClickHandlers = () => {
     dotsNode.innerHTML = emblaApi
       .scrollSnapList()
-      .map(() => '<button class="carousel__dot" type="button"></button>')
+      .map(
+        () =>
+          '<button class="carousel__dot" type="button" aria-label="Dot"></button>'
+      )
       .join("");
 
     const scrollTo = (index) => {
