@@ -63,7 +63,7 @@
     <main class="">
       <section data-aos="fadeInUp">
         <div class="container max-w-screen">
-          <div class="tabs-container my-8">
+          <div class="tabs-container sm:hidden my-8">
             <button class="tab-button">
               <svg
                 class="tab-button__icon"
@@ -82,7 +82,287 @@
             </button>
             <ul class="tabs">
               <li class="tab-item" data-tab-item="AI Services">
-                <input type="radio" name="tabs" aria-label="AI Services" />
+                <input type="radio" name="tabs-sm" value="AI Services" />
+                <svg
+                  class="tab-item__icon text-black"
+                  width="25"
+                  height="24"
+                  viewBox="0 0 25 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M12.5 0L15.2153 9.28471L24.5 12L15.2153 14.7153L12.5 24L9.78471 14.7153L0.5 12L9.78471 9.28471L12.5 0Z"
+                    fill="currentColor"
+                  />
+                </svg>
+                <span class="tab-item__text">AI Services</span>
+              </li>
+              <li class="tab-item" data-tab-item="Cybersecurity Services">
+                <input
+                  type="radio"
+                  name="tabs-sm"
+                  value="Cybersecurity Services"
+                  checked
+                />
+                <svg
+                  class="tab-item__icon text-black"
+                  width="25"
+                  height="24"
+                  viewBox="0 0 25 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M12.5 0L15.2153 9.28471L24.5 12L15.2153 14.7153L12.5 24L9.78471 14.7153L0.5 12L9.78471 9.28471L12.5 0Z"
+                    fill="currentColor"
+                  />
+                </svg>
+                <span class="tab-item__text">Cybersecurity Services</span>
+              </li>
+              <li class="tab-item" data-tab-item="DevOps Services">
+                <input type="radio" name="tabs-sm" value="DevOps Services" />
+                <svg
+                  class="tab-item__icon text-black"
+                  width="25"
+                  height="24"
+                  viewBox="0 0 25 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M12.5 0L15.2153 9.28471L24.5 12L15.2153 14.7153L12.5 24L9.78471 14.7153L0.5 12L9.78471 9.28471L12.5 0Z"
+                    fill="currentColor"
+                  />
+                </svg>
+                <span class="tab-item__text">DevOps Services</span>
+              </li>
+              <li class="tab-item" data-tab-item="Software Development">
+                <input
+                  type="radio"
+                  name="tabs-sm"
+                  value="Software Development"
+                />
+                <svg
+                  class="tab-item__icon text-black"
+                  width="25"
+                  height="24"
+                  viewBox="0 0 25 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M12.5 0L15.2153 9.28471L24.5 12L15.2153 14.7153L12.5 24L9.78471 14.7153L0.5 12L9.78471 9.28471L12.5 0Z"
+                    fill="currentColor"
+                  />
+                </svg>
+                <span class="tab-item__text">Software Development</span>
+              </li>
+              <li
+                class="tab-item"
+                data-tab-item="Mobile Application Development"
+              >
+                <input
+                  type="radio"
+                  name="tabs-sm"
+                  value="Mobile Application Development"
+                />
+                <svg
+                  class="tab-item__icon text-black"
+                  width="25"
+                  height="24"
+                  viewBox="0 0 25 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M12.5 0L15.2153 9.28471L24.5 12L15.2153 14.7153L12.5 24L9.78471 14.7153L0.5 12L9.78471 9.28471L12.5 0Z"
+                    fill="currentColor"
+                  />
+                </svg>
+                <span class="tab-item__text"
+                  >Mobile Application Development</span
+                >
+              </li>
+              <li class="tab-item" data-tab-item="Web Development">
+                <input type="radio" name="tabs-sm" value="Web Development" />
+                <svg
+                  class="tab-item__icon text-black"
+                  width="25"
+                  height="24"
+                  viewBox="0 0 25 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M12.5 0L15.2153 9.28471L24.5 12L15.2153 14.7153L12.5 24L9.78471 14.7153L0.5 12L9.78471 9.28471L12.5 0Z"
+                    fill="currentColor"
+                  />
+                </svg>
+                <span class="tab-item__text">Web Development</span>
+              </li>
+            </ul>
+          </div>
+          <div
+            class="tabs-container carousel--tabs hidden sm:block 2xl:hidden my-8"
+          >
+            <div class="carousel__viewport">
+              <ul class="tabs carousel__container">
+                <li class="carousel__slide">
+                  <div class="tab-item" data-tab-item="AI Services">
+                    <input type="radio" name="tabs-md" value="AI Services" />
+                    <svg
+                      class="tab-item__icon text-black"
+                      width="25"
+                      height="24"
+                      viewBox="0 0 25 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M12.5 0L15.2153 9.28471L24.5 12L15.2153 14.7153L12.5 24L9.78471 14.7153L0.5 12L9.78471 9.28471L12.5 0Z"
+                        fill="currentColor"
+                      />
+                    </svg>
+                    <span class="tab-item__text">AI Services</span>
+                  </div>
+                </li>
+                <li class="carousel__slide">
+                  <div class="tab-item" data-tab-item="Cybersecurity Services">
+                    <input
+                      type="radio"
+                      name="tabs-md"
+                      value="Cybersecurity Services"
+                      checked
+                    />
+                    <svg
+                      class="tab-item__icon text-black"
+                      width="25"
+                      height="24"
+                      viewBox="0 0 25 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M12.5 0L15.2153 9.28471L24.5 12L15.2153 14.7153L12.5 24L9.78471 14.7153L0.5 12L9.78471 9.28471L12.5 0Z"
+                        fill="currentColor"
+                      />
+                    </svg>
+                    <span class="tab-item__text">Cybersecurity Services</span>
+                  </div>
+                </li>
+                <li class="carousel__slide">
+                  <div class="tab-item" data-tab-item="DevOps Services">
+                    <input
+                      type="radio"
+                      name="tabs-md"
+                      value="DevOps Services"
+                    />
+                    <svg
+                      class="tab-item__icon text-black"
+                      width="25"
+                      height="24"
+                      viewBox="0 0 25 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M12.5 0L15.2153 9.28471L24.5 12L15.2153 14.7153L12.5 24L9.78471 14.7153L0.5 12L9.78471 9.28471L12.5 0Z"
+                        fill="currentColor"
+                      />
+                    </svg>
+                    <span class="tab-item__text">DevOps Services</span>
+                  </div>
+                </li>
+                <li class="carousel__slide">
+                  <div class="tab-item" data-tab-item="Software Development">
+                    <input
+                      type="radio"
+                      name="tabs-md"
+                      value="Software Development"
+                    />
+                    <svg
+                      class="tab-item__icon text-black"
+                      width="25"
+                      height="24"
+                      viewBox="0 0 25 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M12.5 0L15.2153 9.28471L24.5 12L15.2153 14.7153L12.5 24L9.78471 14.7153L0.5 12L9.78471 9.28471L12.5 0Z"
+                        fill="currentColor"
+                      />
+                    </svg>
+                    <span class="tab-item__text">Software Development</span>
+                  </div>
+                </li>
+                <li class="carousel__slide">
+                  <div
+                    class="tab-item"
+                    data-tab-item="Mobile Application Development"
+                  >
+                    <input
+                      type="radio"
+                      name="tabs-md"
+                      value="Mobile Application Development"
+                    />
+                    <svg
+                      class="tab-item__icon text-black"
+                      width="25"
+                      height="24"
+                      viewBox="0 0 25 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M12.5 0L15.2153 9.28471L24.5 12L15.2153 14.7153L12.5 24L9.78471 14.7153L0.5 12L9.78471 9.28471L12.5 0Z"
+                        fill="currentColor"
+                      />
+                    </svg>
+                    <span class="tab-item__text"
+                      >Mobile Application Development</span
+                    >
+                  </div>
+                </li>
+                <li class="carousel__slide">
+                  <div class="tab-item" data-tab-item="Web Development">
+                    <input
+                      type="radio"
+                      name="tabs-md"
+                      value="Web Development"
+                    />
+                    <svg
+                      class="tab-item__icon text-black"
+                      width="25"
+                      height="24"
+                      viewBox="0 0 25 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M12.5 0L15.2153 9.28471L24.5 12L15.2153 14.7153L12.5 24L9.78471 14.7153L0.5 12L9.78471 9.28471L12.5 0Z"
+                        fill="currentColor"
+                      />
+                    </svg>
+                    <span class="tab-item__text">Web Development</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="carousel__controls">
+              <div class="carousel__progress">
+                <div
+                  class="carousel__progress__bar"
+                  style="transform: translate3d(0%, 0px, 0px)"
+                ></div>
+              </div>
+            </div>
+          </div>
+          <div class="tabs-container my-8 hidden 2xl:block">
+            <ul class="tabs">
+              <li class="tab-item" data-tab-item="AI Services">
+                <input type="radio" name="tabs-2xl" value="AI Services" />
                 <svg
                   class="tab-item__icon text-black"
                   width="25"
@@ -102,8 +382,8 @@
               <li class="tab-item" data-tab-item="Cybersecurity Services">
                 <input
                   type="radio"
-                  name="tabs"
-                  aria-label="Cybersecurity Services"
+                  name="tabs-2xl"
+                  value="Cybersecurity Services"
                   checked
                 />
                 <svg
@@ -123,7 +403,7 @@
               </li>
               <div class="tabs__devider"></div>
               <li class="tab-item" data-tab-item="DevOps Services">
-                <input type="radio" name="tabs" aria-label="DevOps Services" />
+                <input type="radio" name="tabs-2xl" value="DevOps Services" />
                 <svg
                   class="tab-item__icon text-black"
                   width="25"
@@ -143,8 +423,8 @@
               <li class="tab-item" data-tab-item="Software Development">
                 <input
                   type="radio"
-                  name="tabs"
-                  aria-label="Software Development"
+                  name="tabs-2xl"
+                  value="Software Development"
                 />
                 <svg
                   class="tab-item__icon text-black"
@@ -168,8 +448,8 @@
               >
                 <input
                   type="radio"
-                  name="tabs"
-                  aria-label="Mobile Application Development"
+                  name="tabs-2xl"
+                  value="Mobile Application Development"
                 />
                 <svg
                   class="tab-item__icon text-black"
@@ -190,7 +470,7 @@
               </li>
               <div class="tabs__devider"></div>
               <li class="tab-item" data-tab-item="Web Development">
-                <input type="radio" name="tabs" aria-label="Web Development" />
+                <input type="radio" name="tabs-2xl" value="Web Development" />
                 <svg
                   class="tab-item__icon text-black"
                   width="25"
@@ -2292,5 +2572,6 @@
     <script src="./main.js" type="module"></script>
     <script src="./js/carouselQuotes.js" type="module"></script>
     <script src="./js/carouselCases.js" type="module"></script>
+    <script src="./js/carouselTabs.js" type="module"></script>
   </body>
 </html>

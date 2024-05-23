@@ -34,12 +34,27 @@ const setupTabsContainer = () => {
         content.classList.remove("hidden");
     });
   };
+  const syncTabs = (tab) => {
+    const input = tab.querySelector('input[type="radio"]');
+    if (input.checked === true) {
+      const value = input.value;
+      console.log("value :>> ", value);
+
+      tabs.forEach((tab) => {
+        const input = tab.querySelector('input[type="radio"]');
+        if (input.value === value) {
+          input.checked = true;
+        }
+      });
+    }
+  };
 
   const handleTabClick = (tab) => {
     setBtnText(tab);
     hideAllContent();
     showContentByTab(tab);
     hideTabsList();
+    syncTabs(tab);
   };
 
   btn?.addEventListener("click", handleBtnClick);
