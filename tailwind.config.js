@@ -40,6 +40,7 @@ module.exports = {
       spacing: {
         20: "5rem",
         30: "7.5rem",
+        40: "10rem",
       },
       fontSize: {
         h1: "7.5rem",

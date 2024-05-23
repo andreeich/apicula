@@ -1,27 +1,36 @@
 import EmblaCarousel from "embla-carousel";
-import { addPrevNextBtnsClickHandlers } from "./emblaCarouselArrowButtons";
 import { addDotBtnsAndClickHandlers } from "./emblaCarouselDotButton";
 
 const OPTIONS = {};
 
 const emblaNode = document.querySelector(".carousel--quotes");
+const emblaSubNode = document.querySelector(".carousel--quotes__logos");
 const viewportNode = emblaNode.querySelector(".carousel__viewport");
-// const prevBtnNode = emblaNode.querySelector(".carousel__button--prev");
-// const nextBtnNode = emblaNode.querySelector(".carousel__button--next");
+const viewportSubNode = emblaSubNode.querySelector(".carousel__viewport");
 const dotsNode = emblaNode.querySelector(".carousel__dots");
 
 const emblaApi = EmblaCarousel(viewportNode, OPTIONS);
-
-// const removePrevNextBtnsClickHandlers = addPrevNextBtnsClickHandlers(
-//   emblaApi,
-//   prevBtnNode,
-//   nextBtnNode
-// );
+const emblaSubApi = EmblaCarousel(viewportSubNode, OPTIONS);
 
 const removeDotBtnsAndClickHandlers = addDotBtnsAndClickHandlers(
   emblaApi,
   dotsNode
 );
 
-// emblaApi.on("destroy", removePrevNextBtnsClickHandlers);
-emblaApi.on("destroy", removeDotBtnsAndClickHandlers);
+const syncEmblaScroll = () => {
+  const targetScrollProgress = emblaApi.scrollProgress();
+  console.log("targetScrollProgress :>> ", targetScrollProgress);
+  console.log(
+    "emblaSubApi.scrollSnapList() :>> ",
+    emblaSubApi.scrollSnapList()
+  );
+  const pureIndex =
+    targetScrollProgress * (emblaSubApi.scrollSnapList().length - 1);
+  const index = Math.round(pureIndex);
+  console.log(pureIndex, index);
+  emblaSubApi.scrollTo(index);
+};
+
+emblaApi
+  .on("scroll", syncEmblaScroll)
+  .on("destroy", removeDotBtnsAndClickHandlers);
