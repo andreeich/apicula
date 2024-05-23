@@ -268,6 +268,21 @@ body:not(:has(.navbar-toggle:checked)) {
     flex: 0 0 var(--slide-size);
     min-width: 0;
     padding-left: var(--slide-spacing);
+
+    img[data-type="active"] {
+      @apply hidden;
+    }
+    img[data-type="inactive"] {
+      @apply block;
+    }
+    &[data-active] {
+      img[data-type="active"] {
+        @apply block;
+      }
+      img[data-type="inactive"] {
+        @apply hidden;
+      }
+    }
   }
 }
 
