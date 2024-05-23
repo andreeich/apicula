@@ -41,7 +41,7 @@
   }
 
   .btn {
-    @apply inline-flex py-4 px-10 text-p1/p1 font-bold bg-dark text-white rounded-full transition-all text-center justify-center hover:bg-yellow hover:text-dark;
+    @apply inline-flex py-4 px-10 text-p1/p1 font-bold bg-dark text-white rounded-full transition-all text-center justify-center items-center hover:bg-yellow hover:text-dark min-w-[15rem];
   }
   .btn-white {
     @apply bg-white text-dark hover:bg-yellow hover:text-dark;
@@ -98,7 +98,7 @@ input[type="radio"] {
   @apply rounded-10 outline-none;
 }
 .header-navbar {
-  @apply bg-white/60 backdrop-blur-md;
+  @apply bg-white z-50;
 }
 .navbar {
   @apply h-navbar flex items-center justify-between;
@@ -110,7 +110,7 @@ input[type="radio"] {
   @apply hidden md:flex gap-8;
 }
 .navbar-menu {
-  @apply absolute inset-0 invisible w-full h-fit -translate-y-full pt-navbar bg-white -z-1;
+  @apply absolute inset-0 invisible w-full h-screen -translate-y-full pt-navbar bg-white -z-1;
 
   &__content {
     @apply container grid w-full pt-10 pb-[6.25rem] bg-white overflow-y-auto place-content-stretch;
@@ -287,7 +287,13 @@ body:not(:has(.navbar-toggle:checked)) {
 }
 
 .input {
-  @apply bg-black border border-white/70  rounded-lg py-3 px-4 text-white placeholder:text-white/70 focus-visible:invalid:border-error focus-visible:invalid:text-error disabled:opacity-20 outline-none text-p1/p1 transition-none;
+  @apply bg-black border border-white/70  rounded-lg py-3 px-4 text-white placeholder:text-white/70  disabled:opacity-20 outline-none text-p1/p1 transition-none;
+  &:not(:placeholder-shown) {
+    @apply focus-visible:invalid:border-error focus-visible:invalid:text-error;
+  }
+  &:not(:focus-visible) {
+    @apply valid:border-success;
+  }
 }
 
 .checkbox {
@@ -299,7 +305,7 @@ body:not(:has(.navbar-toggle:checked)) {
 
   &:has(.tab-button[data-active]) {
     .tabs {
-      @apply flex;
+      @apply flex border border-dark;
     }
     .tab-button::after {
       @apply rotate-180;
@@ -308,7 +314,7 @@ body:not(:has(.navbar-toggle:checked)) {
 }
 
 .tabs {
-  @apply hidden absolute top-full bg-white  rounded-t-none p-2 flex-col justify-between w-full mx-auto rounded-10 gap-2 max-w-full snap-mandatory snap-x;
+  @apply hidden absolute top-[calc(100%_-20px)] bg-white  rounded-t-none p-2 pt-7 flex-col justify-between w-full mx-auto rounded-10 gap-2 max-w-full snap-mandatory snap-x;
   @apply sm:flex sm:static sm:flex-row sm:rounded-t-10 sm:items-center sm:p-0 sm:gap-6;
   @apply 2xl:p-2 2xl:border 2xl:gap-5 2xl:border-black;
 
@@ -363,7 +369,7 @@ body:not(:has(.navbar-toggle:checked)) {
   }
 }
 .tab-button {
-  @apply relative flex sm:hidden 2xl:flex-col items-center gap-3 rounded-xl py-3.5 px-5 bg-black text-white text-p3/p3 w-full;
+  @apply relative flex sm:hidden 2xl:flex-col items-center gap-3 rounded-xl py-3.5 px-5 bg-black text-white text-p3/p3 w-full z-10;
   input[type="radio"] {
     @apply appearance-none absolute inset-0 w-full h-full cursor-pointer;
   }
@@ -398,7 +404,7 @@ body:not(:has(.navbar-toggle:checked)) {
     @apply flex items-center justify-between mt-4 w-full;
   }
   .carousel__progress {
-    @apply bg-dark/20 relative overflow-hidden h-[4px] w-full  rounded-full;
+    @apply bg-dark/20 relative overflow-hidden h-[4px] w-full 2xl:h-[8px] rounded-full;
   }
   .carousel__progress__bar {
     @apply bg-dark absolute w-full top-0 bottom-0 -left-full;
@@ -558,4 +564,8 @@ body:not(:has(.navbar-toggle:checked)) {
 
 .badge {
   @apply rounded-full border bg-white border-black inline-flex gap-2 py-2 px-4 text-black text-[0.75rem]/[1.125rem];
+}
+
+.footer-center-link {
+  @apply relative font-semibold text-white text-p2/p2 before:content-[""] before:absolute before:w-0 before:top-full before:left-0 before:h-[3px] before:bg-transparent hover:before:bg-yellow hover:before:w-full before:transition-all;
 }

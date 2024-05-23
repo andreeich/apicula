@@ -33,6 +33,7 @@ module.exports = {
       screens: {
         // sm: "25rem",
         md: "52rem",
+        "max-md": { max: "52rem" },
         "2xl": "90rem",
       },
       dropShadow: {},
@@ -41,6 +42,7 @@ module.exports = {
         20: "5rem",
         30: "7.5rem",
         40: "10rem",
+        50: "12.5rem",
       },
       fontSize: {
         h1: "7.5rem",

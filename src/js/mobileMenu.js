@@ -14,10 +14,14 @@ export const config = {
         // eslint-disable-next-line no-param-reassign
         config.menu.style.visibility = 'hidden';
 
-        document.querySelector('html').classList.remove('max-sm:overflow-hidden');
-        document.querySelector('body').classList.remove('max-sm:overflow-hidden');
-        // document.querySelector('html').classList.remove('max-sm:h-screen');
-        // document.querySelector('body').classList.remove('max-sm:h-screen');
+        document
+          .querySelector("html")
+          .classList.remove("max-md:overflow-hidden");
+        document
+          .querySelector("body")
+          .classList.remove("max-md:overflow-hidden");
+        document.querySelector("html").classList.remove("max-md:h-screen");
+        document.querySelector("body").classList.remove("max-md:h-screen");
       },
     });
     // change button icon to bars-3
@@ -32,10 +36,10 @@ export const config = {
         // eslint-disable-next-line no-param-reassign
         config.menu.style.visibility = 'visible';
 
-        document.querySelector('html').classList.add('max-sm:overflow-hidden');
-        document.querySelector('body').classList.add('max-sm:overflow-hidden');
-        // document.querySelector('html').classList.add('max-sm:h-screen');
-        // document.querySelector('body').classList.add('max-sm:h-screen');
+        document.querySelector("html").classList.add("max-md:overflow-hidden");
+        document.querySelector("body").classList.add("max-md:overflow-hidden");
+        document.querySelector("html").classList.add("max-md:h-screen");
+        document.querySelector("body").classList.add("max-md:h-screen");
       },
     });
     // change button icon to x-mark

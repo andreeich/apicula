@@ -1,5 +1,6 @@
 import EmblaCarousel from "embla-carousel";
 import { addDotBtnsAndClickHandlers } from "./emblaCarouselDotButton";
+import Autoplay from "embla-carousel-autoplay";
 
 const OPTIONS = {
   startIndex: 1,
@@ -13,7 +14,7 @@ const viewportSubNode = emblaSubNode.querySelector(".carousel__viewport");
 const slidesSubNode = emblaSubNode.querySelectorAll(".carousel__slide");
 const dotsNode = emblaNode.querySelector(".carousel__dots");
 
-const emblaApi = EmblaCarousel(viewportNode, OPTIONS);
+const emblaApi = EmblaCarousel(viewportNode, OPTIONS, [Autoplay()]);
 const emblaSubApi = EmblaCarousel(viewportSubNode, OPTIONS);
 
 const removeDotBtnsAndClickHandlers = addDotBtnsAndClickHandlers(
