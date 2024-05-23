@@ -366,24 +366,51 @@ body:not(:has(.navbar-toggle:checked)) {
   }
 }
 .card-tab {
-  @apply relative flex flex-col items-start justify-center gap-2 md:gap-4 bg-gray text-dark rounded-10 p-6 pb-16 overflow-clip text-p2/p2 w-[344px] md:w-full flex-shrink-0 md:flex-shrink snap-center h-full;
+  @apply relative flex flex-col items-start justify-center gap-2 md:gap-4 bg-gray text-dark rounded-10 p-6 pb-16 overflow-clip text-p2/p2 w-[344px] md:w-full flex-shrink-0 md:flex-shrink snap-center h-full transition-all;
 
   &__image {
-    @apply absolute inset-0 w-full h-full object-cover;
+    @apply absolute inset-0 w-full h-full object-cover text-dark/[7%] transition-all;
+  }
+  &__icon {
+    @apply  text-dark transition-all;
   }
   &__container {
     @apply absolute inset-0 pointer-events-none;
+  }
+  
+
+  &:hover {
+    @apply bg-dark text-white;
+    .card-tab__image {
+      @apply text-white/[10%];
+    }
+    
+    .card-tab__icon {
+      @apply text-yellow;
+    }
   }
 }
 
 .card-tab-mini {
-  @apply relative flex flex-col items-start justify-center gap-2 md:gap-4 bg-gray text-dark rounded-10 p-6 overflow-clip text-p2/p2 flex-shrink-0 w-full h-full;
+  @apply relative flex flex-col items-start justify-center gap-2 md:gap-4 bg-gray text-dark rounded-10 p-6 overflow-clip text-p2/p2 flex-shrink-0 w-full h-full transition-all;
 
   &__image {
-    @apply absolute inset-0 w-full h-full object-cover;
+    @apply absolute inset-0 w-full object-top text-dark/[7%] transition-all;
   }
   &__container {
     @apply absolute inset-0 pointer-events-none;
+  }
+  p {
+    @apply hidden;
+  }
+  &:hover {
+    @apply bg-dark text-white;
+    .card-tab-mini__image {
+      @apply text-white/[10%];
+    }
+    p {
+      @apply block;
+    }
   }
 }
 
