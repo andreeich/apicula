@@ -17,7 +17,7 @@ const setupTabsContainer = () => {
 
   const setBtnText = (tab) => {
     const input = tab?.querySelector('input[type="radio"]');
-    if (input?.checked === true) {
+    if (input?.checked === true || tab.getAttribute("data-active") !== null) {
       const tabText = tab.querySelector(".tab-item__text");
       btnText.textContent = tabText.textContent;
     }
@@ -36,20 +36,49 @@ const setupTabsContainer = () => {
   };
   const syncTabs = (tab) => {
     const input = tab.querySelector('input[type="radio"]');
-    if (input.checked === true) {
-      const value = input.value;
-      console.log("value :>> ", value);
+    if (input?.checked === true || tab.getAttribute("data-active") !== null) {
+      if (input) {
+        const value = input.value;
 
-      tabs.forEach((tab) => {
-        const input = tab.querySelector('input[type="radio"]');
-        if (input.value === value) {
-          input.checked = true;
-        }
-      });
+        tabs.forEach((tab) => {
+          const input = tab.querySelector('input[type="radio"]');
+          if (
+            input?.value === value ||
+            tab.getAttribute("data-tab-item") === value
+          ) {
+            if (input) {
+              input.checked = true;
+            } else {
+              tab.setAttribute("data-active", "");
+            }
+          }
+        });
+      } else {
+        const value = tab.getAttribute("data-tab-item");
+
+        tabs.forEach((tab) => {
+          const input = tab.querySelector('input[type="radio"]');
+          if (
+            input?.value === value ||
+            tab.getAttribute("data-tab-item") === value
+          ) {
+            if (input) {
+              input.checked = true;
+            } else {
+              tab.setAttribute("data-active", "");
+            }
+          }
+        });
+      }
     }
+  };
+  const handleTabByDataClick = (tab) => {
+    tabs.forEach((tab) => tab.removeAttribute("data-active"));
+    tab.setAttribute("data-active", "");
   };
 
   const handleTabClick = (tab) => {
+    handleTabByDataClick(tab);
     setBtnText(tab);
     hideAllContent();
     showContentByTab(tab);

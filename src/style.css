@@ -288,7 +288,7 @@ body:not(:has(.navbar-toggle:checked)) {
     @apply text-black transition-all;
   }
 
-  &:has(input[type="radio"]:checked) {
+  &:has(input[type="radio"]:checked), &[data-active] {
     @apply bg-black text-white hidden sm:flex;
     .tab-item__icon {
       @apply text-yellow;
@@ -338,9 +338,35 @@ body:not(:has(.navbar-toggle:checked)) {
   background: no-repeat center/contain url('data:image/svg+xml,%3Csvg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath d="M6 9L12 15L18 9" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/%3E%3C/svg%3E%0A');
  }
 }
+.carousel--cards {
+  @apply max-w-full mx-auto [--slide-spacing:1.5rem] 2xl:[--slide-spacing:2rem] [--slide-size:auto] md:[--slide-size:calc(100%_/_3)] 2xl:[--slide-size:304px] overflow-hidden;
 
+  .carousel__viewport {
+    /* @apply ; */
+  }
+  .carousel__container {
+    @apply flex;
+    backface-visibility: hidden;
+    touch-action: pan-y pinch-zoom;
+    margin-left: calc(var(--slide-spacing) * -1);
+  }
+  .carousel__slide {
+    flex: 0 0 var(--slide-size);
+    min-width: 0;
+    padding-left: var(--slide-spacing);
+  }
+  .carousel__controls {
+    @apply flex items-center justify-between mt-4 w-full;
+  }
+  .carousel__progress {
+    @apply bg-dark/20 relative overflow-hidden h-[4px] w-full  rounded-full;
+  }
+  .carousel__progress__bar {
+    @apply bg-dark absolute w-full top-0 bottom-0 -left-full;
+  }
+}
 .card-tab {
-  @apply relative flex flex-col items-start justify-center gap-2 md:gap-4 bg-gray text-dark rounded-10 p-6 pb-16 overflow-clip text-p2/p2 w-[90%] md:w-1/3 flex-shrink-0 md:flex-shrink snap-center;
+  @apply relative flex flex-col items-start justify-center gap-2 md:gap-4 bg-gray text-dark rounded-10 p-6 pb-16 overflow-clip text-p2/p2 w-[344px] md:w-full flex-shrink-0 md:flex-shrink snap-center h-full;
 
   &__image {
     @apply absolute inset-0 w-full h-full object-cover;
@@ -350,9 +376,8 @@ body:not(:has(.navbar-toggle:checked)) {
   }
 }
 
-
 .card-tab-mini {
-  @apply relative flex flex-col items-start justify-center gap-2 md:gap-4 bg-gray text-dark rounded-10 p-6 overflow-clip text-p2/p2 w-[31%] 2xl:w-[300px] flex-shrink-0 snap-center;
+  @apply relative flex flex-col items-start justify-center gap-2 md:gap-4 bg-gray text-dark rounded-10 p-6 overflow-clip text-p2/p2 flex-shrink-0 w-full h-full;
 
   &__image {
     @apply absolute inset-0 w-full h-full object-cover;
@@ -363,10 +388,21 @@ body:not(:has(.navbar-toggle:checked)) {
 }
 
 .card-tab-container {
-  @apply flex flex-col justify-end gap-4 flex-shrink-0 snap-center w-[70%] md:hidden;
+  @apply grid grid-rows-3 grid-cols-1 justify-end gap-4 flex-shrink-0 snap-center h-full w-[280px] md:w-full;
   .card-tab-mini {
     @apply w-full;
+
+    &:nth-child(1) {
+      grid-row: 3;
+    }
+    &:nth-child(2) {
+      grid-row: 2;
+    }
+    &:nth-child(3) {
+      grid-row: 1;
+    }
   }
+  
 }
 
 .carousel--cases {
