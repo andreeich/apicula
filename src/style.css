@@ -416,24 +416,22 @@ body:not(:has(.navbar-toggle:checked)) {
 }
 
 .card-tab-mini {
-  @apply relative flex flex-col items-start justify-center gap-2 md:gap-4 bg-gray text-dark rounded-10 p-6 overflow-clip text-p2/p2 flex-shrink-0 w-full h-full transition-all;
+  @apply relative flex flex-col items-start justify-center gap-2 md:gap-4 bg-gray text-dark rounded-10 p-6 text-p2/p2 flex-shrink-0 w-full h-full;
+  transition-delay: border-radius 0.12s;
 
-  &__image {
-    @apply absolute inset-0 w-full object-top text-dark/[7%] transition-all;
-  }
-  &__container {
-    @apply absolute inset-0 pointer-events-none;
-  }
-  p {
-    @apply hidden;
+  .card-tab-mini__content {
+    @apply absolute top-full left-0 bg-gray text-dark rounded-10 p-6 pt-0 text-p2/p2 w-full rounded-t-none  overflow-hidden z-10 hidden;
+    * {
+      @apply line-clamp-4
+    }
   }
   &:hover {
-    @apply bg-dark text-white;
-    .card-tab-mini__image {
-      @apply text-white/[10%];
-    }
-    p {
+    @apply bg-dark text-white rounded-b-none ;
+    /* p {
       @apply block;
+    } */
+    .card-tab-mini__content {
+      @apply bg-dark text-white block;
     }
   }
 }

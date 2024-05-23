@@ -1,7 +1,10 @@
 import EmblaCarousel from "embla-carousel";
 import { addDotBtnsAndClickHandlers } from "./emblaCarouselDotButton";
 
-const OPTIONS = {};
+const OPTIONS = {
+  startIndex: 1,
+  loop: true,
+};
 
 const emblaNode = document.querySelector(".carousel--quotes");
 const emblaSubNode = document.querySelector(".carousel--quotes__logos");
@@ -18,17 +21,7 @@ const removeDotBtnsAndClickHandlers = addDotBtnsAndClickHandlers(
 );
 
 const syncEmblaScroll = () => {
-  const targetScrollProgress = emblaApi.scrollProgress();
-  console.log("targetScrollProgress :>> ", targetScrollProgress);
-  console.log(
-    "emblaSubApi.scrollSnapList() :>> ",
-    emblaSubApi.scrollSnapList()
-  );
-  const pureIndex =
-    targetScrollProgress * (emblaSubApi.scrollSnapList().length - 1);
-  const index = Math.round(pureIndex);
-  console.log(pureIndex, index);
-  emblaSubApi.scrollTo(index);
+  emblaSubApi.scrollTo(emblaApi.selectedScrollSnap());
 };
 
 emblaApi
