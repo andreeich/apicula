@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "bun clean && bun parcel ./src/*.html",
     "build": "bun clean && bun parcel build ./src/*.html",
-    "production": "bun clean && bun parcel build ./src/*.html --no-optimize --no-source-maps --detailed-report",
+    "production": "bun clean && bun parcel build ./src/*.html --no-optimize --no-source-maps --detailed-report --config .parcelrc.prod",
     "clean": "rm -rf dist && rm -rf .parcel-cache",
     "test": "jest"
   },
