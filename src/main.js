@@ -7,7 +7,6 @@ import "./js/carouselCases";
 import "./js/carouselQuotes";
 
 // import "./js/aos";
-import "./style.css";
 
 setupPreloader();
 setupMobileMenu();

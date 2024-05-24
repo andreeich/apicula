@@ -29,6 +29,8 @@
     "path-browserify": "^1.0.0",
     "postcss": "^8.4.38",
     "postcss-modules": "^4.3.1",
+    "posthtml-doctype": "^1.1.1",
+    "posthtml-include": "^2.0.1",
     "posthtml-minify-classnames": "^0.4.0",
     "prettier": "3.2.5",
     "process": "^0.11.10",
@@ -47,7 +49,7 @@
     "throttle-debounce": "^5.0.0"
   },
   "@parcel/runtime-js": {
-    "splitManifestThreshold": 10000
+    "splitManifestThreshold": 1e4
   },
   "@parcel/transformer-css": {
     "cssModules": {
