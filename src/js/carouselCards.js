@@ -2,7 +2,15 @@ import EmblaCarousel from "embla-carousel";
 import { setupProgressBar } from "./emblaCarouselProgressBarByView";
 import { addPrevNextBtnsClickHandlers } from "./emblaCarouselArrowButtons";
 
-const OPTIONS = { align: "start", startIndex: 0, dragFree: false, loop: false };
+const OPTIONS = {
+  align: "start",
+  startIndex: 0,
+  dragFree: false,
+  loop: false,
+  breakpoints: {
+    "(min-width: 52rem)": { slidesToScroll: 3 },
+  },
+};
 
 const emblaNode = document.querySelectorAll(".carousel--cards");
 

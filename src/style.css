@@ -182,7 +182,7 @@ body:not(:has(.navbar-toggle:checked)) {
 }
 
 .accordion {
-  @apply text-dark relative grid grid-cols-1 gap-0 py-8 border-b border-[#CDCDCD] transition-all;
+  @apply relative grid grid-cols-1 gap-0 py-8 border-b border-[#CDCDCD] transition-all;
   grid-template-rows: auto 0fr;
 
   input[type="radio"] {
@@ -320,7 +320,7 @@ body:not(:has(.navbar-toggle:checked)) {
 }
 
 .tabs {
-  @apply hidden absolute top-[calc(100%_-_20px)] bg-white  rounded-t-none p-2 pt-7 flex-col justify-between w-full mx-auto rounded-10 gap-2 max-w-full snap-mandatory snap-x;
+  @apply hidden absolute top-[calc(100%_-_20px)] bg-white/60 sm:bg-white backdrop-blur-md sm:backdrop-blur-none rounded-t-none p-2 pt-7 flex-col justify-between w-full mx-auto rounded-10 gap-2 max-w-full snap-mandatory snap-x;
   @apply sm:flex sm:static sm:flex-row sm:rounded-t-10 sm:items-center sm:p-0 sm:gap-6;
   @apply 2xl:p-2 2xl:border 2xl:gap-5 2xl:border-black;
 
@@ -331,7 +331,7 @@ body:not(:has(.navbar-toggle:checked)) {
   }
 }
 .tab-item {
-  @apply flex 2xl:flex-col items-center gap-3 rounded-xl py-3.5 px-5 text-black relative transition-all text-center text-p3/p3 whitespace-nowrap 2xl:whitespace-normal snap-center border border-transparent hover:border-black bg-gray sm:bg-transparent;
+  @apply flex 2xl:flex-col items-center gap-3 rounded-xl py-3.5 px-5 text-black relative transition-all text-center text-p3/p3 whitespace-nowrap 2xl:whitespace-normal snap-center border border-transparent bg-gray sm:bg-transparent;
   input[type="radio"] {
     @apply appearance-none absolute inset-0 w-full h-full cursor-pointer;
   }
@@ -339,6 +339,12 @@ body:not(:has(.navbar-toggle:checked)) {
     @apply text-black transition-all;
   }
 
+  &:hover {
+    @apply bg-black text-white;
+    .tab-item__icon {
+      @apply text-yellow;
+    }
+  }
   &:has(input[type="radio"]:checked), &[data-active] {
     @apply bg-black text-white hidden sm:flex;
     .tab-item__icon {
@@ -410,7 +416,7 @@ body:not(:has(.navbar-toggle:checked)) {
     @apply flex items-center justify-between mt-4 w-full;
   }
   .carousel__progress {
-    @apply bg-dark/20 relative overflow-hidden h-[4px] w-full 2xl:h-[8px] rounded-full;
+    @apply bg-dark/20 relative overflow-hidden h-[4px] w-full rounded-full;
   }
   .carousel__progress__bar {
     @apply bg-dark absolute w-full top-0 bottom-0 -left-full rounded-full;
@@ -427,7 +433,7 @@ body:not(:has(.navbar-toggle:checked)) {
   @apply relative flex flex-col items-start justify-start gap-2 md:gap-4 bg-gray text-dark rounded-10 p-6 pb-16 overflow-clip text-p2/p2 w-[344px] md:w-full flex-shrink-0 md:flex-shrink snap-center h-full transition-all;
 
   &__image {
-    @apply absolute inset-0 w-full h-full object-cover text-dark/[7%] transition-all;
+    @apply absolute inset-0 w-full h-full object-cover text-dark/[7%] transition-all pointer-events-none;
   }
   &__icon {
     @apply  text-dark transition-all;
@@ -584,4 +590,7 @@ body:not(:has(.navbar-toggle:checked)) {
 }
 .footer-gray-link {
   @apply opacity-60 hover:opacity-100 transition-all;
+}
+.card-tab__image {
+  @apply absolute inset-0 w-[500px] h-[500px] object-fill transition-all pointer-events-none;
 }
