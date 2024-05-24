@@ -365,7 +365,7 @@ body:not(:has(.navbar-toggle:checked)) {
     @apply bg-dark/20 relative overflow-hidden h-[4px] w-full  rounded-full;
   }
   .carousel__progress__bar {
-    @apply bg-dark absolute w-full top-0 bottom-0 -left-full;
+    @apply bg-dark absolute w-full top-0 bottom-0 -left-full rounded-full;
   }
 }
 .tab-button {
@@ -407,7 +407,14 @@ body:not(:has(.navbar-toggle:checked)) {
     @apply bg-dark/20 relative overflow-hidden h-[4px] w-full 2xl:h-[8px] rounded-full;
   }
   .carousel__progress__bar {
-    @apply bg-dark absolute w-full top-0 bottom-0 -left-full;
+    @apply bg-dark absolute w-full top-0 bottom-0 -left-full rounded-full;
+  }
+  .carousel__advanced-progress {
+    @apply flex items-center gap-6 md:gap-8 w-full;
+  }
+  .carousel__button {
+    @apply flex flex-shrink-0 items-center justify-center w-10 h-10 rounded-full bg-gray text-dark transition-all hover:bg-yellow;
+    touch-action: manipulation;
   }
 }
 .card-tab {
@@ -500,7 +507,7 @@ body:not(:has(.navbar-toggle:checked)) {
     @apply bg-dark/20 relative overflow-hidden h-[4px] sm:h-[1px] w-full sm:w-[84px] rounded-full;
   }
   .carousel__progress__bar {
-    @apply bg-dark absolute w-full top-0 bottom-0 -left-full;
+    @apply bg-dark absolute w-full top-0 bottom-0 -left-full rounded-full;
   }
   .carousel__advanced-progress {
     @apply flex items-center gap-8 w-full;
@@ -515,7 +522,7 @@ body:not(:has(.navbar-toggle:checked)) {
     @apply hidden sm:flex gap-6;
   }
   .carousel__button {
-    @apply flex items-center justify-center w-10 h-10 rounded-full bg-gray text-dark transition-all hover:bg-yellow;
+    @apply flex flex-shrink-0 items-center justify-center w-10 h-10 rounded-full bg-gray text-dark transition-all hover:bg-yellow;
     touch-action: manipulation;
   }
 }
