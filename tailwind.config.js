@@ -31,7 +31,8 @@ module.exports = {
       },
       backgroundImage: {},
       screens: {
-        // sm: "25rem",
+        sm: "40rem",
+        "max-sm": { max: "40rem" },
         md: "52rem",
         "max-md": { max: "52rem" },
         "2xl": "90rem",
