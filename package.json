@@ -1,6 +1,5 @@
 {
   "name": "parcel-template",
-  "browserslist": "> 0.5%, last 2 versions, not dead",
   "version": "1.0.2",
   "license": "MIT",
   "scripts": {
@@ -54,5 +53,16 @@
     "cssModules": {
       "pattern": "my-company-[name]-[hash]-[local]"
     }
+  },
+  "parcel-namer-custom": {
+    "favicon.": "[name].[type]",
+    ".s?css": "css/[name].[type]",
+    ".jsx?$": "js/[name].[type]",
+    ".png$|.jpe?g$|.svg$": "assets/images/[name].[type]",
+    ".mp4$": "assets/videos/[name].[type]",
+    ".ttf$": "fonts/[folder]/[name].[type]",
+    ".otf$": "fonts/[folder]/[name].[type]",
+    ".woff$": "fonts/[folder]/[name].[type]",
+    ".woff2": "fonts/[folder]/[name].[type]"
   }
 }

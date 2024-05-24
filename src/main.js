@@ -1,16 +1,13 @@
 import setupPreloader from "./js/preloader";
 import setupMobileMenu from "./js/mobileMenu";
-import setupTabsContainer from "./js/tabsContainer";
+// import setupTabsContainer from "./js/tabsContainer";
 import "./js/carouselCards";
 import "./js/carouselTabs";
 import "./js/carouselCases";
 import "./js/carouselQuotes";
 
-// import './js/splide';
-import "./js/aos";
-
+// import "./js/aos";
 import "./style.css";
 
 setupPreloader();
 setupMobileMenu();
-setupTabsContainer();

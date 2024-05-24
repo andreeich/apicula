@@ -1,7 +1,7 @@
 {
   "extends": "@parcel/config-default",
   "compressors": {
-    "*.{js,html,css}": [
+    "*.{html,css}": [
       "...",
       "@parcel/compressor-gzip",
       "@parcel/compressor-brotli"
@@ -13,7 +13,8 @@
       "@parcel/transformer-react-refresh-wrap"
     ]
   },
-  "optimizers": {
-    "*.css": ["@parcel/optimizer-cssnano"]
-  }
+  "namers": [
+    "parcel-namer-custom",
+    "..."
+  ]
 }

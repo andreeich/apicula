@@ -52,6 +52,8 @@ const setupMobileMenu = () => {
   const toggle = document.querySelector(".navbar .navbar-toggle");
   const menu = document.querySelector(".navbar .navbar-menu");
 
+  if (!toggle || !menu) return;
+
   toggle.checked = true;
 
   config.toggle = toggle;
@@ -69,7 +71,9 @@ const setupMobileMenu = () => {
   const setOpenThrottle = throttle(config.duration, () => {
     setOpen();
   });
-  toggle.addEventListener('click', setOpenThrottle);
+  toggle.addEventListener("click", setOpenThrottle);
 };
+
+// setupMobileMenu();
 
 export default setupMobileMenu;
