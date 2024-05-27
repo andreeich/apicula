@@ -11,8 +11,7 @@ export const config = {
       translateY: ['0px', '-110%'],
       duration: config.duration,
       complete() {
-        // eslint-disable-next-line no-param-reassign
-        config.menu.style.visibility = 'hidden';
+        config.menu.style.visibility = "hidden";
 
         document
           .querySelector("html")
@@ -33,8 +32,7 @@ export const config = {
       translateY: ['-110%', '0px'],
       duration: config.duration,
       begin() {
-        // eslint-disable-next-line no-param-reassign
-        config.menu.style.visibility = 'visible';
+        config.menu.style.visibility = "visible";
 
         document.querySelector("html").classList.add("max-sm:overflow-hidden");
         document.querySelector("body").classList.add("max-sm:overflow-hidden");

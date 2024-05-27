@@ -31,7 +31,7 @@ export const addPrevNextBtnsClickHandlers = (emblaApi, prevBtn, nextBtn) => {
   const removeTogglePrevNextBtnsActive = addTogglePrevNextBtnsActive(
     emblaApi,
     prevBtn,
-    nextBtn
+    nextBtn,
   );
 
   return () => {
